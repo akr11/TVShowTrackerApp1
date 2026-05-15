@@ -1,0 +1,381 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A10000010203040506070807 /* TVShowTrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000001020304050607080A /* TVShowTrackerApp.swift */; };
+		A10000010203040506070808 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1000001020304050607080B /* Assets.xcassets */; };
+		A10000010203040506070809 /* TVShowTrackerPackage in Frameworks */ = {isa = PBXBuildFile; productRef = A10000010203040506070817 /* TVShowTrackerPackage */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A1000001020304050607081A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A10000010203040506070801 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A10000010203040506070818;
+			remoteInfo = BuildSharedKmp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A1000001020304050607080A /* TVShowTrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVShowTrackerApp.swift; sourceTree = "<group>"; };
+		A1000001020304050607080B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A1000001020304050607080C /* TVShowTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TVShowTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A10000010203040506070804 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A10000010203040506070809 /* TVShowTrackerPackage in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXAggregateTarget section */
+		A10000010203040506070818 /* BuildSharedKmp */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = A1000001020304050607081B /* Build configuration list for PBXAggregateTarget "BuildSharedKmp" */;
+			buildPhases = (
+				A10000010203040506070806 /* Sync KMP Shared XCFramework */,
+			);
+			dependencies = (
+			);
+			name = BuildSharedKmp;
+			productName = BuildSharedKmp;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXGroup section */
+		A1000001020304050607080D = {
+			isa = PBXGroup;
+			children = (
+				A1000001020304050607080E /* TVShowTracker */,
+				A1000001020304050607080F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A1000001020304050607080E /* TVShowTracker */ = {
+			isa = PBXGroup;
+			children = (
+				A1000001020304050607080A /* TVShowTrackerApp.swift */,
+				A1000001020304050607080B /* Assets.xcassets */,
+			);
+			path = TVShowTracker;
+			sourceTree = "<group>";
+		};
+		A1000001020304050607080F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A1000001020304050607080C /* TVShowTracker.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A10000010203040506070802 /* TVShowTracker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A10000010203040506070811 /* Build configuration list for PBXNativeTarget "TVShowTracker" */;
+			buildPhases = (
+				A10000010203040506070803 /* Sources */,
+				A10000010203040506070804 /* Frameworks */,
+				A10000010203040506070805 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A10000010203040506070819 /* PBXTargetDependency */,
+			);
+			name = TVShowTracker;
+			packageProductDependencies = (
+				A10000010203040506070817 /* TVShowTrackerPackage */,
+			);
+			productName = TVShowTracker;
+			productReference = A1000001020304050607080C /* TVShowTracker.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A10000010203040506070801 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					A10000010203040506070802 = {
+						CreatedOnToolsVersion = 15.0;
+					};
+					A10000010203040506070818 = {
+						CreatedOnToolsVersion = 15.0;
+					};
+				};
+			};
+			buildConfigurationList = A10000010203040506070810 /* Build configuration list for PBXProject "TVShowTracker" */;
+			compatibilityVersion = "Xcode 15.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A1000001020304050607080D;
+			packageReferences = (
+				A10000010203040506070816 /* XCLocalSwiftPackageReference "TVShowTrackerPackage" */,
+			);
+			productRefGroup = A1000001020304050607080F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A10000010203040506070818 /* BuildSharedKmp */,
+				A10000010203040506070802 /* TVShowTracker */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A10000010203040506070805 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A10000010203040506070808 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A10000010203040506070806 /* Sync KMP Shared XCFramework */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Sync KMP Shared XCFramework";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\nMARKER=\"${SRCROOT}/../shared/build/XCFrameworks/release/Shared.xcframework/Info.plist\"\nif [ ! -f \"$MARKER\" ]; then\n  bash \"${SRCROOT}/sync-shared-xcframework.sh\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A10000010203040506070803 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A10000010203040506070807 /* TVShowTrackerApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A10000010203040506070819 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A10000010203040506070818 /* BuildSharedKmp */;
+			targetProxy = A1000001020304050607081A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		A10000010203040506070812 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		A10000010203040506070813 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_OPTIMIZATION_LEVEL = z;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_VERSION = 5.0;
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+		A10000010203040506070814 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "TV Tracker";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment";
+				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "Loads show data from TVmaze API.";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tvshowtracker.ios;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A10000010203040506070815 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "TV Tracker";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment";
+				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "Loads show data from TVmaze API.";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tvshowtracker.ios;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		A1000001020304050607081D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				SWIFT_VERSION = 5.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		A1000001020304050607081E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				SWIFT_VERSION = 5.0;
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A10000010203040506070810 /* Build configuration list for PBXProject "TVShowTracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A10000010203040506070812 /* Debug */,
+				A10000010203040506070813 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A10000010203040506070811 /* Build configuration list for PBXNativeTarget "TVShowTracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A10000010203040506070814 /* Debug */,
+				A10000010203040506070815 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A1000001020304050607081B /* Build configuration list for PBXAggregateTarget "BuildSharedKmp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A1000001020304050607081D /* Debug */,
+				A1000001020304050607081E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		A10000010203040506070816 /* XCLocalSwiftPackageReference TVShowTrackerPackage */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = TVShowTrackerPackage;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A10000010203040506070817 /* TVShowTrackerPackage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A10000010203040506070816 /* XCLocalSwiftPackageReference TVShowTrackerPackage */;
+			productName = TVShowTrackerPackage;
+		};
+/* End XCSwiftPackageProductDependency section */
+
+	};
+	rootObject = A10000010203040506070801 /* Project object */;
+}

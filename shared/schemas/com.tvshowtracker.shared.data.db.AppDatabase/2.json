@@ -1,0 +1,223 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 2,
+    "identityHash": "06a896a177fd82dd97f21a15ee9635e7",
+    "entities": [
+      {
+        "tableName": "favorite_shows",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`showId` INTEGER NOT NULL, `name` TEXT NOT NULL, `posterUrl` TEXT, `summaryPlain` TEXT, `genresCsv` TEXT NOT NULL, `ratingAverage` REAL, `runtimeMinutes` INTEGER, `language` TEXT, `status` TEXT, `premiered` TEXT, `networkName` TEXT, `addedAtEpochMs` INTEGER NOT NULL, PRIMARY KEY(`showId`))",
+        "fields": [
+          {
+            "fieldPath": "showId",
+            "columnName": "showId",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "name",
+            "columnName": "name",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "posterUrl",
+            "columnName": "posterUrl",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "summaryPlain",
+            "columnName": "summaryPlain",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "genresCsv",
+            "columnName": "genresCsv",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "ratingAverage",
+            "columnName": "ratingAverage",
+            "affinity": "REAL"
+          },
+          {
+            "fieldPath": "runtimeMinutes",
+            "columnName": "runtimeMinutes",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "language",
+            "columnName": "language",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "status",
+            "columnName": "status",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "premiered",
+            "columnName": "premiered",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "networkName",
+            "columnName": "networkName",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "addedAtEpochMs",
+            "columnName": "addedAtEpochMs",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "showId"
+          ]
+        }
+      },
+      {
+        "tableName": "cached_episodes",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`episodeId` INTEGER NOT NULL, `showId` INTEGER NOT NULL, `season` INTEGER NOT NULL, `number` INTEGER NOT NULL, `name` TEXT, `airdate` TEXT, `runtimeMinutes` INTEGER, `mediumImageUrl` TEXT, `summaryPlain` TEXT, PRIMARY KEY(`episodeId`), FOREIGN KEY(`showId`) REFERENCES `favorite_shows`(`showId`) ON UPDATE NO ACTION ON DELETE CASCADE )",
+        "fields": [
+          {
+            "fieldPath": "episodeId",
+            "columnName": "episodeId",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "showId",
+            "columnName": "showId",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "season",
+            "columnName": "season",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "number",
+            "columnName": "number",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "name",
+            "columnName": "name",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "airdate",
+            "columnName": "airdate",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "runtimeMinutes",
+            "columnName": "runtimeMinutes",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "mediumImageUrl",
+            "columnName": "mediumImageUrl",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "summaryPlain",
+            "columnName": "summaryPlain",
+            "affinity": "TEXT"
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "episodeId"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_cached_episodes_showId",
+            "unique": false,
+            "columnNames": [
+              "showId"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_cached_episodes_showId` ON `${TABLE_NAME}` (`showId`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "favorite_shows",
+            "onDelete": "CASCADE",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "showId"
+            ],
+            "referencedColumns": [
+              "showId"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "watched_episodes",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`showId` INTEGER NOT NULL, `episodeId` INTEGER NOT NULL, PRIMARY KEY(`showId`, `episodeId`), FOREIGN KEY(`showId`) REFERENCES `favorite_shows`(`showId`) ON UPDATE NO ACTION ON DELETE CASCADE )",
+        "fields": [
+          {
+            "fieldPath": "showId",
+            "columnName": "showId",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "episodeId",
+            "columnName": "episodeId",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "showId",
+            "episodeId"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_watched_episodes_showId",
+            "unique": false,
+            "columnNames": [
+              "showId"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_watched_episodes_showId` ON `${TABLE_NAME}` (`showId`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "favorite_shows",
+            "onDelete": "CASCADE",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "showId"
+            ],
+            "referencedColumns": [
+              "showId"
+            ]
+          }
+        ]
+      }
+    ],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '06a896a177fd82dd97f21a15ee9635e7')"
+    ]
+  }
+}

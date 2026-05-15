@@ -1,0 +1,50 @@
+client:
+  name: basic
+  file-system: device-agnostic
+tools: {}
+targets:
+  "PackageStructure": ["<PackageStructure>"]
+  "TVShowTrackerPackage-arm64-apple-macosx-debug.module": ["<TVShowTrackerPackage-arm64-apple-macosx-debug.module>"]
+  "main": ["<TVShowTrackerPackage-arm64-apple-macosx-debug.module>"]
+  "test": ["<TVShowTrackerPackage-arm64-apple-macosx-debug.module>"]
+default: "main"
+nodes:
+  "/Users/andriykruglyanko/Documents/kotlin/TVShowTrackerApp1/iosApp/TVShowTrackerPackage/Sources/TVShowTrackerPackage/":
+    is-directory-structure: true
+    content-exclusion-patterns: [".git",".build"]
+  "/Users/andriykruglyanko/Documents/kotlin/TVShowTrackerApp1/shared/build/XCFrameworks/release/Shared.xcframework/":
+    is-directory-structure: true
+    content-exclusion-patterns: [".git",".build"]
+commands:
+  "/Users/andriykruglyanko/Documents/kotlin/TVShowTrackerApp1/iosApp/TVShowTrackerPackage/.build/arm64-apple-macosx/debug/TVShowTrackerPackage.build/sources":
+    tool: write-auxiliary-file
+    inputs: ["<sources-file-list>","/Users/andriykruglyanko/Documents/kotlin/TVShowTrackerApp1/iosApp/TVShowTrackerPackage/Sources/TVShowTrackerPackage/TVShowScreens.swift"]
+    outputs: ["/Users/andriykruglyanko/Documents/kotlin/TVShowTrackerApp1/iosApp/TVShowTrackerPackage/.build/arm64-apple-macosx/debug/TVShowTrackerPackage.build/sources"]
+    description: "Write auxiliary file /Users/andriykruglyanko/Documents/kotlin/TVShowTrackerApp1/iosApp/TVShowTrackerPackage/.build/arm64-apple-macosx/debug/TVShowTrackerPackage.build/sources"
+
+  "/Users/andriykruglyanko/Documents/kotlin/TVShowTrackerApp1/iosApp/TVShowTrackerPackage/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt":
+    tool: write-auxiliary-file
+    inputs: ["<swift-get-version>","/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"]
+    outputs: ["/Users/andriykruglyanko/Documents/kotlin/TVShowTrackerApp1/iosApp/TVShowTrackerPackage/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt"]
+    always-out-of-date: "true"
+    description: "Write auxiliary file /Users/andriykruglyanko/Documents/kotlin/TVShowTrackerApp1/iosApp/TVShowTrackerPackage/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt"
+
+  "<TVShowTrackerPackage-arm64-apple-macosx-debug.module>":
+    tool: phony
+    inputs: ["/Users/andriykruglyanko/Documents/kotlin/TVShowTrackerApp1/iosApp/TVShowTrackerPackage/.build/arm64-apple-macosx/debug/TVShowTrackerPackage.build/TVShowScreens.swift.o","/Users/andriykruglyanko/Documents/kotlin/TVShowTrackerApp1/iosApp/TVShowTrackerPackage/.build/arm64-apple-macosx/debug/Modules/TVShowTrackerPackage.swiftmodule"]
+    outputs: ["<TVShowTrackerPackage-arm64-apple-macosx-debug.module>"]
+
+  "C.TVShowTrackerPackage-arm64-apple-macosx-debug.module":
+    tool: shell
+    inputs: ["/Users/andriykruglyanko/Documents/kotlin/TVShowTrackerApp1/iosApp/TVShowTrackerPackage/Sources/TVShowTrackerPackage/TVShowScreens.swift","/Users/andriykruglyanko/Documents/kotlin/TVShowTrackerApp1/iosApp/TVShowTrackerPackage/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt","/Users/andriykruglyanko/Documents/kotlin/TVShowTrackerApp1/iosApp/TVShowTrackerPackage/.build/arm64-apple-macosx/debug/TVShowTrackerPackage.build/sources"]
+    outputs: ["/Users/andriykruglyanko/Documents/kotlin/TVShowTrackerApp1/iosApp/TVShowTrackerPackage/.build/arm64-apple-macosx/debug/TVShowTrackerPackage.build/TVShowScreens.swift.o","/Users/andriykruglyanko/Documents/kotlin/TVShowTrackerApp1/iosApp/TVShowTrackerPackage/.build/arm64-apple-macosx/debug/Modules/TVShowTrackerPackage.swiftmodule"]
+    description: "Compiling Swift Module 'TVShowTrackerPackage' (1 sources)"
+    args: ["/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc","-module-name","TVShowTrackerPackage","-emit-dependencies","-emit-module","-emit-module-path","/Users/andriykruglyanko/Documents/kotlin/TVShowTrackerApp1/iosApp/TVShowTrackerPackage/.build/arm64-apple-macosx/debug/Modules/TVShowTrackerPackage.swiftmodule","-output-file-map","/Users/andriykruglyanko/Documents/kotlin/TVShowTrackerApp1/iosApp/TVShowTrackerPackage/.build/arm64-apple-macosx/debug/TVShowTrackerPackage.build/output-file-map.json","-parse-as-library","-incremental","-c","@/Users/andriykruglyanko/Documents/kotlin/TVShowTrackerApp1/iosApp/TVShowTrackerPackage/.build/arm64-apple-macosx/debug/TVShowTrackerPackage.build/sources","-I","/Users/andriykruglyanko/Documents/kotlin/TVShowTrackerApp1/iosApp/TVShowTrackerPackage/.build/arm64-apple-macosx/debug/Modules","-target","arm64-apple-macosx10.13","-v","-incremental","-enable-batch-mode","-serialize-diagnostics","-index-store-path","/Users/andriykruglyanko/Documents/kotlin/TVShowTrackerApp1/iosApp/TVShowTrackerPackage/.build/arm64-apple-macosx/debug/index/store","-Onone","-enable-testing","-j8","-DSWIFT_PACKAGE","-DDEBUG","-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE","-module-cache-path","/Users/andriykruglyanko/Documents/kotlin/TVShowTrackerApp1/iosApp/TVShowTrackerPackage/.build/arm64-apple-macosx/debug/ModuleCache","-parseable-output","-parse-as-library","-emit-objc-header","-emit-objc-header-path","/Users/andriykruglyanko/Documents/kotlin/TVShowTrackerApp1/iosApp/TVShowTrackerPackage/.build/arm64-apple-macosx/debug/TVShowTrackerPackage.build/include/TVShowTrackerPackage-Swift.h","-swift-version","5","-plugin-path","/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing","-sdk","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.4.sdk","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-I","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-L","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-g","-Xcc","-isysroot","-Xcc","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.4.sdk","-Xcc","-F","-Xcc","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-Xcc","-fPIC","-Xcc","-g","-package-name","tvshowtrackerpackage"]
+
+  "PackageStructure":
+    tool: package-structure-tool
+    inputs: ["/Users/andriykruglyanko/Documents/kotlin/TVShowTrackerApp1/iosApp/TVShowTrackerPackage/Sources/TVShowTrackerPackage/","/Users/andriykruglyanko/Documents/kotlin/TVShowTrackerApp1/shared/build/XCFrameworks/release/Shared.xcframework/","/Users/andriykruglyanko/Documents/kotlin/TVShowTrackerApp1/iosApp/TVShowTrackerPackage/Package.swift","/Users/andriykruglyanko/Documents/kotlin/TVShowTrackerApp1/iosApp/TVShowTrackerPackage/Package.resolved"]
+    outputs: ["<PackageStructure>"]
+    description: "Planning build"
+    allow-missing-inputs: true
+

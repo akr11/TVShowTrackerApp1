@@ -1,0 +1,12 @@
+{
+  "": {
+    "swift-dependencies": "/Users/andriykruglyanko/Documents/kotlin/TVShowTrackerApp1/iosApp/TVShowTrackerPackage/.build/arm64-apple-macosx/debug/TVShowTrackerPackage.build/primary.swiftdeps"
+  },
+  "/Users/andriykruglyanko/Documents/kotlin/TVShowTrackerApp1/iosApp/TVShowTrackerPackage/Sources/TVShowTrackerPackage/TVShowScreens.swift": {
+    "dependencies": "/Users/andriykruglyanko/Documents/kotlin/TVShowTrackerApp1/iosApp/TVShowTrackerPackage/.build/arm64-apple-macosx/debug/TVShowTrackerPackage.build/TVShowScreens.d",
+    "object": "/Users/andriykruglyanko/Documents/kotlin/TVShowTrackerApp1/iosApp/TVShowTrackerPackage/.build/arm64-apple-macosx/debug/TVShowTrackerPackage.build/TVShowScreens.swift.o",
+    "swiftmodule": "/Users/andriykruglyanko/Documents/kotlin/TVShowTrackerApp1/iosApp/TVShowTrackerPackage/.build/arm64-apple-macosx/debug/TVShowTrackerPackage.build/TVShowScreens~partial.swiftmodule",
+    "swift-dependencies": "/Users/andriykruglyanko/Documents/kotlin/TVShowTrackerApp1/iosApp/TVShowTrackerPackage/.build/arm64-apple-macosx/debug/TVShowTrackerPackage.build/TVShowScreens.swiftdeps",
+    "diagnostics": "/Users/andriykruglyanko/Documents/kotlin/TVShowTrackerApp1/iosApp/TVShowTrackerPackage/.build/arm64-apple-macosx/debug/TVShowTrackerPackage.build/TVShowScreens.dia"
+  }
+}
